@@ -9,7 +9,7 @@ describe('mdLinks', () => {
 
   it('Debería retornar un arreglo vacio si se pasa como argumento un archivo que no es .md',async  () => {
     const check = await mdLinks(['../index.js'])
-    chai.assert.deepEqual(check,[])
+    assert.deepEqual(check,[])
   });
 
   it('Debería retornar un arreglo vacio si se entrega como argumento una ruta inexistente',async  () => {
@@ -34,14 +34,3 @@ describe('mdLinks', () => {
   
 });
 
-describe('helpers', () => {
-
-  it('Debería ser un objeto', () => {
-    expect(typeof helpers).toBe('object');
-  });
-
-  it('helpers.getLinks debería retornar una promesa cuyo resolve sea un arreglo de objetos que contenga los links, el archivo y la linea', async () => {
-      assert.deepEqual()
-  });
-
-});
