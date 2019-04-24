@@ -28,7 +28,7 @@ const extracLinks = (path) => {
     //Se usará el renderer anteriormente para que 
     { renderer: renderer };
     marked(markdown, { renderer: renderer });
-    /*Si la promesa se resuelve, esta preparada para ser consumida desde mdLinks (.then)*/
+    //Si la promesa se resuelve devolvera los links encontrados//
     resolve(links);
   }
 catch (error) {
@@ -39,5 +39,5 @@ catch (error) {
 
 
 module.exports = {
-  extractLinksFromFile
+  extractLinks
 }
